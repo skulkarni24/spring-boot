@@ -10,8 +10,13 @@ public class UserDetailsController {
 	
 	@RequestMapping(value="/getUserDetails" , method=RequestMethod.GET)
 	public String getUserDetails() {
-		return "swetha.....";
+		return "swetha.....kkk...";
 		
 	}
 
+	@RequestMapping(value="/getemp" , method=RequestMethod.GET)
+	public String getUserDetails2() {
+		return "something";
+		
+	}
 }
