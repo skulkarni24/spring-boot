@@ -8,9 +8,9 @@
 </head>
 <body>
 <h1 style="color : red">this is books jsp</h1>
-<br>java,</br>
-<br> hibernate,</br>
- <br>spring</br>
- my name is ${name}
+
+ <br>Book Details </br>
+ <br>book name is : ${book.name} </br>
+  book description is : ${book.description} 
 </body>
 </html>

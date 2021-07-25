@@ -14,12 +14,12 @@
         </form:form>
         
          <form:form action="/showBookDetails" method="GET" >
-           <b>clik here to goto book.jsp page</b>
+           <b>clik here to see string</b>
             <input type="submit" value="View Book Detials"/>
         </form:form>
         
         <form:form action="/showBooks" method="GET" >
-           <b>clik here to see string</b>
+           <b>clik here to see view</b>
             <input type="submit" value="Show Books"/>
         </form:form>
         
