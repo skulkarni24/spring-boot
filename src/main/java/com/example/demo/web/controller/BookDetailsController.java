@@ -1,5 +1,8 @@
 package com.example.demo.web.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -16,8 +19,15 @@ public class BookDetailsController {
 	
 	@RequestMapping(value="/showBookDetails" , method=RequestMethod.GET)
 	@ResponseBody
-	public String showBooksDetails() {
-		return "book";
+	public List<Books> showBooksDetails() {
+		List<Books>books = new ArrayList<Books>();
+		Books b1 = new Books();
+		Books b2 = new Books();
+		b1.setName("book1");
+		b2.setName("book2");
+		books.add(b2);
+		books.add(b1);
+		return books;
 		
 	}
 
@@ -25,7 +35,7 @@ public class BookDetailsController {
 	public ModelAndView showString(Model model) {
 		ModelAndView mav = new ModelAndView();
 		Books books = new Books();
-		books.setName("Java");
+		books.setName("Java....................");
 		books.setDescription("java 8 code");
 		mav.getModelMap().put("book", books);
 	    mav.setViewName("book");

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>this is books jsp file</title>
+<title>this is books.jsp file</title>
 </head>
 <body>
 <h1 style="color : red">this is books jsp</h1>
