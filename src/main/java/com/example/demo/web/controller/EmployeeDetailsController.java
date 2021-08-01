@@ -12,28 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.web.dao.Employee;
 import com.example.demo.web.dao.EmployeeRepo;
+import com.example.demo.web.service.EmployeeService;
 
 @RestController
 public class EmployeeDetailsController {
-
-	@Autowired
-	EmployeeRepo repo;
-	
+@Autowired
+EmployeeService empService;
 
 	@RequestMapping(value="/getEmployeeDetails" , method=RequestMethod.GET)
 	public List<Employee> getEmpDetails() {
-		List<Employee> emp = new ArrayList<Employee>();
-		emp = repo.listEmpDetails();
-		return emp;
-		
+		return empService.listEmpDetails();
 	}	
 	
 	@RequestMapping(value="/saveEmployeeDetails" , method=RequestMethod.POST)
 	public Employee saveEmpDetails(@RequestBody Employee e) {
-		Employee emp = new Employee();
-		emp = repo.save(e);
-		return emp;
-		
+		return empService.saveEmployeeDetails(e);		
 	}	
 	
 }
