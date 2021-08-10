@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,8 @@ public class EmployeeDetailsController {
 @Autowired
 EmployeeService empService;
 
+
+
 	@RequestMapping(value="/getEmployeeDetails" , method=RequestMethod.GET)
 	public List<Employee> getEmpDetails() {
 		return empService.listEmpDetails();
@@ -27,6 +30,11 @@ EmployeeService empService;
 	@RequestMapping(value="/saveEmployeeDetails" , method=RequestMethod.POST)
 	public Employee saveEmpDetails(@RequestBody Employee e) {
 		return empService.saveEmployeeDetails(e);		
+	}	
+	
+	@RequestMapping(value="/getEmployeeDetailsByName/{empname}" , method=RequestMethod.GET)
+	public List<Employee> fetchEmployeeDetails(@PathVariable String empname) {
+		return empService.fetchEmployeeDetails(empname);
 	}	
 	
 }

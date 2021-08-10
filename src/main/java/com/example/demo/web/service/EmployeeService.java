@@ -9,4 +9,6 @@ public interface EmployeeService {
 public List<Employee> listEmpDetails();	
 	
 public Employee saveEmployeeDetails(Employee emp);
+
+public List<Employee> fetchEmployeeDetails(String empname);
 }

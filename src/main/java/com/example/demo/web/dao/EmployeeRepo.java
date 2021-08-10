@@ -14,4 +14,7 @@ public interface EmployeeRepo extends CrudRepository<Employee, Long> {
 
     @Query("SELECT e FROM Employee e")
 	public List<Employee> listEmpDetails();
+    
+    
+    
 }

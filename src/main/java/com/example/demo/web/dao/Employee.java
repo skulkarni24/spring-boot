@@ -1,11 +1,17 @@
 package com.example.demo.web.dao;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Employee")
+@NamedNativeQuery(name = "findByName", query = "SELECT * FROM employee WHERE name = ?", resultClass = Employee.class)
+
 public class Employee {
 	
 	  @Id  
