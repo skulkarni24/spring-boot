@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.web.dao.Employee;
 import com.example.demo.web.dao.EmployeeRepo;
+import com.example.demo.web.dto.EmployDto;
 import com.example.demo.web.service.EmployeeService;
 
 @RestController
@@ -23,7 +24,7 @@ EmployeeService empService;
 
 
 	@RequestMapping(value="/getEmployeeDetails" , method=RequestMethod.GET)
-	public List<Employee> getEmpDetails() {
+	public List<EmployDto> getEmpDetails() {
 		return empService.listEmpDetails();
 	}	
 	

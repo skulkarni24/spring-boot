@@ -22,7 +22,6 @@ public class Employee {
 	
 	  private float salary;
 	
-	
 
 	public Long getId() {
 		return id;
